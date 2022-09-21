@@ -67,6 +67,7 @@ fn get_simple_intrinsic<'gcc, 'tcx>(cx: &CodegenCx<'gcc, 'tcx>, name: Symbol) ->
         sym::nearbyintf64 => "nearbyint",
         sym::roundf32 => "roundf",
         sym::roundf64 => "round",
+        sym::set_rounding_mode => "",
         sym::abort => "abort",
         _ => return None,
     };

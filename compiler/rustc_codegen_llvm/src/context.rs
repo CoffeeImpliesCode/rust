@@ -745,11 +745,20 @@ impl<'ll> CodegenCx<'ll, '_> {
         ifn!("llvm.round.f32", fn(t_f32) -> t_f32);
         ifn!("llvm.round.f64", fn(t_f64) -> t_f64);
 
+        /*ifn!(
+            "llvm.experimental.constrained.fadd.f32",
+            fn(t_f32, t_f32, t_metadata, t_metadata) -> t_f32
+        );
+        ifn!(
+            "llvm.experimental.constrained.fadd.f64",
+            fn(t_f64, t_f64, t_metadata, t_metadata) -> t_f64
+        );*/
+        ifn!("llvm.set.rounding", fn(t_i32) -> void);
+
         ifn!("llvm.rint.f32", fn(t_f32) -> t_f32);
         ifn!("llvm.rint.f64", fn(t_f64) -> t_f64);
         ifn!("llvm.nearbyint.f32", fn(t_f32) -> t_f32);
         ifn!("llvm.nearbyint.f64", fn(t_f64) -> t_f64);
-
         ifn!("llvm.ctpop.i8", fn(t_i8) -> t_i8);
         ifn!("llvm.ctpop.i16", fn(t_i16) -> t_i16);
         ifn!("llvm.ctpop.i32", fn(t_i32) -> t_i32);

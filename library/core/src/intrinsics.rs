@@ -1592,6 +1592,10 @@ extern "rust-intrinsic" {
     /// [`f64::round`](../../std/primitive.f64.html#method.round)
     pub fn roundf64(x: f64) -> f64;
 
+    // pub fn rounding_addf32(x: f32, y: f32, )
+
+    pub fn set_rounding_mode(rounding_mode: i32) -> ();
+
     /// Float addition that allows optimizations based on algebraic rules.
     /// May assume inputs are finite.
     ///

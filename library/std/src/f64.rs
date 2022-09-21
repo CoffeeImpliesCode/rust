@@ -89,6 +89,12 @@ impl f64 {
         unsafe { intrinsics::roundf64(self) }
     }
 
+    #[rustc_allow_incoherent_impl]
+    #[inline]
+    pub unsafe fn set_rounding_mode(&self, rounding_mode: i32) {
+        intrinsics::set_rounding_mode(rounding_mode)
+    }
+
     /// Returns the integer part of `self`.
     /// This means that non-integer numbers are always truncated towards zero.
     ///

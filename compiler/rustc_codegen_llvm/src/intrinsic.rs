@@ -71,6 +71,9 @@ fn get_simple_intrinsic<'ll>(
         sym::nearbyintf64 => "llvm.nearbyint.f64",
         sym::roundf32 => "llvm.round.f32",
         sym::roundf64 => "llvm.round.f64",
+        // sym::rounding_addf32 => "llvm.experimental.constrained.fadd.f32",
+        // sym::rounding_addf64 => "llvm.experimental.constrained.fadd.f64",
+        sym::set_rounding_mode => "llvm.set.rounding",
         sym::ptr_mask => "llvm.ptrmask",
         _ => return None,
     };
